@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="grid-item mockup-main">
               <div className="mockup-box">
                 <div className="mockup-screen">
-                  <img src="/trabajo.png" alt="Dashboard" />
+                  <img src="/mockup-dev.png" alt="Dashboard" />
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
             <div className="grid-item work-3">
               <img
-                src="/mockup-dev.png"
+                src="/trabajo.png"
                 alt="Trabajo 3"
               />
             </div>
