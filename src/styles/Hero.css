@@ -1,0 +1,280 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  background:
+    radial-gradient(circle at 20% 20%, #1e293b 0%, #0f172a 60%),
+    radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.15), transparent 40%);
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0f172a;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #f8fafc;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenedor principal con un poco más de aire */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  /* Usamos fracciones mixtas para que no sean cuadrados perfectos aburridos */
+  grid-template-columns: 1.2fr 0.8fr 1fr; 
+  grid-template-rows: repeat(3, 140px);
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Estilo base de los items con efecto Glassmorphism */
+.grid-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03); /* Fondo sutil si la imagen tarda en cargar */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde fino estilo Apple */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+/* Imagen con filtro inicial para que el Hero no sea caótico */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) brightness(0.8); /* Un poco más oscuro para que resalte el texto del hero */
+  transition: all 0.5s ease;
+}
+
+/* --- EFECTOS HOVER --- */
+
+.grid-item:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: #00d2ff; /* Color de acento (ajusta según tu logo) */
+  box-shadow: 0 25px 50px rgba(0, 210, 255, 0.15); /* Brillo suave del color de tu marca */
+  z-index: 10;
+}
+
+.grid-item:hover img {
+  filter: grayscale(0%) brightness(1); /* Recupera color total al pasar el mouse */
+  transform: scale(1.1); /* Zoom suave interno */
+}
+
+/* Overlay sutil al hacer hover para mostrar que es clickeable */
+.grid-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.grid-item:hover::after {
+  opacity: 1;
+}
+
+/* --- POSICIONAMIENTO DINÁMICO --- */
+
+.mockup-main {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Más brillo al principal */
+}
+
+/* Pequeño desfase para que no se vea todo "bloque" */
+.work-1 { 
+  grid-column: 3; 
+  grid-row: 1 / 3; /* La hacemos alta para romper la monotonía */
+}
+
+.work-2 { 
+  grid-column: 1; 
+  grid-row: 3; 
+}
+
+.work-3 { 
+  grid-column: 2 / 4; 
+  grid-row: 3; 
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    justify-content: center;
+    transform: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+
+  .hero-buttons {
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mockup-box {
+    max-width: 520px;
+    height: 360px;
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================
+    MOBILE (Max-width: 600px)
+   ========================= */
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 1.25rem;
+  }
+
+  .hero-container {
+    gap: 2rem; /* Espacio equilibrado entre texto y visual */
+  }
+
+  /* --- Tipografía --- */
+  .hero-content h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    opacity: 0.9; /* Mejora legibilidad en fondos oscuros */
+  }
+
+  /* --- Grilla de Proyectos --- */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 160px) 100px; /* Ajuste de altura para que no quede infinito */
+    gap: 12px;
+  }
+
+  /* El mockup principal toma prioridad visual */
+  .mockup-main { 
+    grid-column: 1 / 3; 
+    grid-row: 1 / 2; 
+  }
+
+  /* Las imágenes secundarias se vuelven complementarias */
+  .work-1 { grid-column: 1; grid-row: 2; }
+  .work-2 { grid-column: 2; grid-row: 2; }
+  
+  /* La última imagen la ocultamos o la dejamos pequeña al final */
+  .work-3 { 
+    grid-column: 1 / 3; 
+    grid-row: 3; 
+  }
+
+  /* --- Mockup Refinado --- */
+  .mockup-box {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Proporción estándar de pantallas modernas */
+    border-radius: 12px;
+  }
+
+  /* --- Botones --- */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    width: 100%;
+    padding: 14px; /* Un poco más de área de click (mejor UX) */
+  }
+}

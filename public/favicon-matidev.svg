@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 170 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Hexágono -->
+  <path d="M85 12 L145 48 V102 L85 138 L25 102 V48 Z" stroke="#1e293b" stroke-width="6" fill="none"></path>
+
+  <!-- M -->
+  <path d="M55 100 V60 L75 88 L95 60 V100" stroke="#22d3ee" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- A -->
+  <path d="M70 100 L85 60 L100 100" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <!-- Nodo -->
+  <circle cx="85" cy="45" r="5" fill="#06b6d4"></circle>
+
+</svg>
