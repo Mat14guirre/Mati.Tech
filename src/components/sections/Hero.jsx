@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1>
-            Desarrollo Web y <span>Sistemas a Medida</span>
+            Desarrollo web y <span>Sistemas a medida</span>
           </h1>
 
           <p>
@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="grid-item mockup-main">
               <div className="mockup-box">
                 <div className="mockup-screen">
-                  <img src="/mockup-dev.png" alt="Dashboard" />
+                  <img src="/trabajo.png" alt="Dashboard" />
                 </div>
               </div>
             </div>
@@ -53,19 +53,19 @@ const Hero = () => {
             {/* Imágenes de trabajos realizados (los "cuadrados verdes") */}
             <div className="grid-item work-1">
               <img
-                src="https://picsum.photos/400/400?random=1"
+                src="/trabajo1.png"
                 alt="Trabajo 1"
               />
             </div>
             <div className="grid-item work-2">
               <img
-                src="https://picsum.photos/400/500?random=2"
+                src="/trabajo2.png"
                 alt="Trabajo 2"
               />
             </div>
             <div className="grid-item work-3">
               <img
-                src="https://picsum.photos/500/400?random=3"
+                src="/mockup-dev.png"
                 alt="Trabajo 3"
               />
             </div>
