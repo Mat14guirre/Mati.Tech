@@ -53,19 +53,19 @@ const Hero = () => {
             {/* Imágenes de trabajos realizados (los "cuadrados verdes") */}
             <div className="grid-item work-1">
               <img
-                src="/trabajo1.png"
+                src="/trabajo.png"
                 alt="Trabajo 1"
               />
             </div>
             <div className="grid-item work-2">
               <img
-                src="/trabajo2.png"
+                src="/trabajo4.png"
                 alt="Trabajo 2"
               />
             </div>
             <div className="grid-item work-3">
               <img
-                src="/trabajo.png"
+                src="/trabajo5.png"
                 alt="Trabajo 3"
               />
             </div>

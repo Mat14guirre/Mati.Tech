@@ -14,9 +14,7 @@ const About = () => {
             Mi objetivo es ayudar a emprendedores y empresas a crecer online, simplificar procesos y llevar su negocio al siguiente nivel.
           </p>
         </div>
-        <div className="about-image">
-          <img src="/perfil-dev.png" alt="Matias Ezequiel Aguirre" />
-        </div>
+        
       </div>
     </section>
   );
